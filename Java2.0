@@ -2,14 +2,10 @@
 
 2.Print the following pattern where n is the user input. e.g. for n = 5
 
-1                    1
-
-12               21	
-
-123          321
-
-1234     4321
-
+1        1
+12      21	
+123    321
+1234  4321
 1234554321
 
 3.Write a Java Program which print all prime numbers between 1 to n.  Where n is a user input.

@@ -1,7 +1,7 @@
 1.Given an integer n, print the number of trailing zeroes in n factorial i.e. n!.
 
 2.Print the following pattern where n is the user input. e.g. for n = 5
-
+Output:
 1        1
 12      21	
 123    321

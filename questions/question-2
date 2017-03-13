@@ -1,0 +1,58 @@
+1.What gets displayed on the screen when the following program is compiled and run. Select the one correct answer.
+
+protected class example {
+	public static void main(String args[]) {
+		String test = "abc";
+		test = test + test;
+		System.out.println(test);
+	}
+}
+protected class example {
+	public static void main(String args[]) {
+		String test = "abc";
+		test = test + test;
+		System.out.println(test);
+	}
+}
+	1.The class does not compile because the top level class cannot be protected.
+	2.The program prints “abc”
+	3.The program prints “abcabc”
+	4.The program does not compile because statement “test = test + test” is illegal.
+
+
+2.A top level class may have only the following access modifier. Select the one correct answer.
+	1.package
+	2.friendly
+	3.private
+	4.protected
+	5.public
+
+3.Write down the modifier of a method that makes the method available to all classes in the same package and to all the subclasses of this class.
+
+4.Select the one most appropriate answer. A top level class without any modifier is accessible to –
+	1.any class
+	2.any class within the same package
+	3.any class within the same file
+	4.any subclass of this class.
+
+5.Is this True or False. In Java an abstract class cannot be sub-classed.
+
+6.Is this True or False. In Java a final class must be sub-classed before it can be used.
+
+7.Which of the following are true. Select the three correct answers.
+	1.A static method may be invoked before even a single instance of the class is constructed.
+	2.A static method cannot access non-static methods of the class.
+	3.Abstract modifier can appear before a class or a method but not before a variable.
+	4.final modifier can appear before a class or a variable but not before a method.
+	5.Synchronized modifier may appear before a method or a variable but not before a class.
+
+
+Answers to questions on classes in Java
+
+1.a
+2.e
+3.protected
+4.b
+5.False
+6.False
+7.a, b, c. final modifier may appear before a method, a variable or before a class.

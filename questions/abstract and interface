@@ -1,0 +1,201 @@
+1) Below class ABC doesn’t have even a single abstract method, but it has been declared as abstract. Is it correct?
+
+abstract class ABC
+{
+    void firstMethod()
+    {
+        System.out.println("First Method");
+    }
+     
+    void secondMethod()
+    {
+        System.out.println("Second Method");
+    }
+}
+
+Answer :
+Yes, it is correct. abstract classes may or may not have abstract methods.
+
+
+2) Why the below class is showing compilation error?
+abstract class AbstractClass
+{
+    abstract void abstractMethod()
+    {
+        System.out.println("First Method");
+    }
+}
+Answer :
+Because, abstract methods must not have a body.
+
+
+3) Which class is instantiable? Class A or Class B?
+abstract class A
+{
+     
+}
+ 
+class B extends A
+{
+     
+}
+Answer :
+Class B.
+
+4) Below code snippet is showing compilation error? Can you suggest the corrections?
+abstract class A
+{
+    abstract int add(int a, int b);
+}
+ 
+class B extends A
+{
+     
+}
+Answer :
+Class B must implement inherited abstract method A.add() or else it must be declared as abstract.
+
+5) Is the following program written correctly? If yes, what value “result” variable will hold if you run the program?
+abstract class Calculate
+{
+    abstract int add(int a, int b);
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        int result = new Calculate()
+        {    
+            @Override
+            int add(int a, int b)
+            {
+                return a+b;
+            }
+        }.add(11010, 022011);
+    }
+}
+Answer :
+Yes, program is written correctly. result = 20235.
+
+6) Can we write explicit constructors in an abstract class? 
+
+Answer :
+Yes. abstract classes can have any number of constructors.
+
+
+7) Can you identify the error in the below code?
+abstract class AbstractClass
+{
+    private abstract int abstractMethod();
+}
+View Answer
+Answer :
+abstract methods can’t be private.
+
+
+8) Can we declare protected methods in an interface?
+
+Answer :
+No. only public methods are allowed in an interface.
+
+
+9) What will be the output of the following program?
+abstract class A
+{
+    abstract void firstMethod();
+     
+    void secondMethod()
+    {
+        System.out.println("SECOND");
+         
+        firstMethod();
+    }
+}
+ 
+abstract class B extends A
+{
+    @Override
+    void firstMethod()
+    {
+        System.out.println("FIRST");
+         
+        thirdMethod();
+    }
+     
+    abstract void thirdMethod();
+}
+ 
+class C extends B
+{
+    @Override
+    void thirdMethod()
+    {
+        System.out.println("THIRD");
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        C c = new C();
+         
+        c.firstMethod();
+         
+        c.secondMethod();
+         
+        c.thirdMethod();
+    }
+}
+View Answer
+Answer :
+FIRST
+THIRD
+SECOND
+FIRST
+THIRD
+THIRD
+
+
+
+10) What will be the output of the below program?
+
+abstract class X
+{
+    public X()
+    {
+        System.out.println("ONE");
+    }
+     
+    abstract void abstractMethod();
+}
+ 
+class Y extends X
+{
+    public Y() 
+    {
+        System.out.println("TWO");
+    }
+     
+    @Override
+    void abstractMethod()
+    {
+        System.out.println("THREE");
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        X x = new Y();
+         
+        x.abstractMethod();
+    }
+}
+View Answer
+Answer :
+ONE
+TWO
+THREE
